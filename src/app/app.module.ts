@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ChartModule } from '@syncfusion/ej2-angular-charts';
+import { ChartComponent, ChartModule } from '@syncfusion/ej2-angular-charts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CategoryService, LegendService, TooltipService } from '@syncfusion/ej2-angular-charts';
+import { DataLabelService, LineSeriesService} from '@syncfusion/ej2-angular-charts';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     ChartModule
   ],
-  providers: [],
+  providers: [CategoryService, LegendService, TooltipService, DataLabelService, LineSeriesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
